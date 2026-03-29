@@ -1,8 +1,10 @@
+import os
 import streamlit as st
 import pandas as pd
 import joblib
 
-pipeline = joblib.load("models/pipeline.pkl")
+file_path = os.path.join(os.path.dirname(__file__), "models/pipeline.pkl")
+pipeline = joblib.load(file_path)
 
 st.title("ASG 04 MD - Constantine Amadio - Spaceship Titanic Model Deployment")
 st.header("Passenger Information")
